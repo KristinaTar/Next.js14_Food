@@ -2,7 +2,7 @@ export default function Page() {
 
   return (
     <main>
-      <p>ABOUT US</p>
+      <p>Meals</p>
     </main>
   );
 }
