@@ -12,7 +12,7 @@ type Meal = {
 };
 
 type MealsGridProps = {
-  meals: Meal[];  // Define the structure of the props
+  meals: Meal[];
 };
 
 export default function MealsGrid({ meals }: MealsGridProps) {
