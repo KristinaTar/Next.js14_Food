@@ -6,16 +6,13 @@ import MealsGrid from "@/component/meals/mealsGrid";
 import { getMeals } from "../../../lib/meals";
 
 
-
 export async function Meals() {
   const meals = await getMeals();
-
   return <MealsGrid meals={meals} />
 }
 
 
 export  default function MealsPage() {
-
 
   return (
     <>
