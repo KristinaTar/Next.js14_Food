@@ -5,12 +5,16 @@ import classes from './page.module.css';
 import MealsGrid from "@/component/meals/mealsGrid";
 import { getMeals } from "../../../lib/meals";
 
+export const metadata= {
+  title: "All Meals",
+  description: "Browse all shared meals",
+}
 
-export async function Meals() {
+
+async function Meals() {
   const meals = await getMeals();
   return <MealsGrid meals={meals} />
 }
-
 
 export  default function MealsPage() {
 

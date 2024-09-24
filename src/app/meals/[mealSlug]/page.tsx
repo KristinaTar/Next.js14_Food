@@ -8,6 +8,18 @@ type Params= {
   mealSlug: string;
 }
 
+export async function generateMetadata({ params }: { params: Params }){
+  const meal = getMeal(params.mealSlug);
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.description,
+  }
+}
+
 export default function MealDetailsPage({ params }: { params: Params }) {
   const meal = getMeal(params.mealSlug);
 
